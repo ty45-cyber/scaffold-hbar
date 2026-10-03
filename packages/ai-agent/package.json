@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@hashgraph/hedera-agent-kit": "^4.1.0",
-    "@hashgraph/sdk": "^2.50.0"
+    "@hiero-ledger/sdk": "^2.86.2"
   },
   "devDependencies": {
     "typescript": "^5",

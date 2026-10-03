@@ -1,5 +1,5 @@
 import { HederaAgentAPI } from "@hashgraph/hedera-agent-kit";
-import { Client, PrivateKey } from "@hashgraph/sdk";
+import { Client, PrivateKey } from "@hiero-ledger/sdk";
 
 export class AgentExecutor {
   private agentKit: HederaAgentAPI | null = null;
