@@ -1,0 +1,21 @@
+{
+  "name": "@scaffold-hbar/hardhat",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts --network hederaTestnet",
+    "chain": "hardhat node"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.50.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0",
+    "typescript": "^5",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20"
+  }
+}

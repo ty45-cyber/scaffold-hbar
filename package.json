@@ -1,0 +1,21 @@
+{
+  "name": "scaffold-hbar",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "chain": "turbo run chain --filter=@scaffold-hbar/hardhat",
+    "deploy": "turbo run deploy --filter=@scaffold-hbar/hardhat",
+    "start": "turbo run dev --filter=@scaffold-hbar/nextjs"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  },
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

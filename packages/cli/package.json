@@ -1,0 +1,20 @@
+{
+  "name": "create-scaffold-hbar",
+  "version": "0.1.0",
+  "bin": { "create-scaffold-hbar": "dist/index.js" },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20",
+    "@types/fs-extra": "^11",
+    "@types/prompts": "^2"
+  }
+}

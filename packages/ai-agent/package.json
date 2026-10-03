@@ -1,0 +1,20 @@
+{
+  "name": "@scaffold-hbar/ai-agent",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "mcp": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@hashgraph/hedera-agent-kit": "^4.1.0",
+    "@hashgraph/sdk": "^2.50.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20"
+  }
+}

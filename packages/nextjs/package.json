@@ -1,0 +1,30 @@
+{
+  "name": "@scaffold-hbar/nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "wagmi": "^2.12.0",
+    "viem": "^2.21.0",
+    "@rainbow-me/rainbowkit": "^2.1.7",
+    "@tanstack/react-query": "^5.56.2",
+    "@hashgraph/sdk": "^2.50.0",
+    "hashconnect": "^3.0.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8",
+    "autoprefixer": "^10.0.1"
+  }
+}

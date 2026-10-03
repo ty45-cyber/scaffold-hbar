@@ -1,0 +1,8 @@
+description: Hedera Hashgraph & Scaffold-HBAR AI Context Rules
+globs: ["**/*.ts", "**/*.tsx", "**/*.sol"]
+rules:
+  - "Always use Hedera JSON-RPC Relay URL (https://testnet.hashio.io/api) for EVM operations."
+  - "Use Chain ID 296 for Hedera Testnet and Chain ID 295 for Hedera Mainnet."
+  - "Prefer native HTS (@hashgraph/sdk) over EVM smart contracts for fungible/NFT creation to minimize transaction costs ($0.001 USD fixed fee)."
+  - "Ensure all private keys are prefixed with '0x' when passing to Viem or Hardhat."
+  - "When parsing contract events, fetch logs via Hashio RPC or Hedera Mirror Node REST APIs."
