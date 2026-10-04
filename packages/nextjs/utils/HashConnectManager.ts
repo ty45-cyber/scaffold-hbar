@@ -1,4 +1,10 @@
-import { HashConnect, HashConnectConnectionState } from "hashconnect";
+import {
+  DAppConnector,
+  HederaJsonRpcMethod,
+  HederaSessionEvent,
+  HederaChainId,
+} from "@hashgraph/hedera-wallet-connect";
+import { LedgerId } from "@hiero-ledger/sdk";
 
 export interface AppMetadata {
   name: string;
@@ -8,26 +14,32 @@ export interface AppMetadata {
 }
 
 export class HashConnectManager {
-  private hashconnect: HashConnect;
+  private connector: DAppConnector;
 
   constructor(appMetadata: AppMetadata) {
-    this.hashconnect = new HashConnect(
-      appMetadata as any,
+    this.connector = new DAppConnector(
+      appMetadata,
+      LedgerId.TESTNET,
       process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "scaffold-hbar-dev",
-      "testnet",
-      false
+      Object.values(HederaJsonRpcMethod),
+      [HederaSessionEvent.ChainChanged, HederaSessionEvent.AccountsChanged],
+      [HederaChainId.Testnet]
     );
   }
 
-  public async pairWallet(): Promise<void> {
-    await this.hashconnect.openPairingModal();
+  public async init(): Promise<void> {
+    await this.connector.init({ logger: "error" });
   }
 
-  public getConnectionState(): HashConnectConnectionState {
-    return this.hashconnect.connectionState;
+  public async pairWallet(): Promise<void> {
+    await this.connector.openModal();
   }
 
   public getSigner(accountId: string) {
-    return this.hashconnect.getSigner(accountId as any);
+    return this.connector.getSigner(accountId as any);
+  }
+
+  public disconnect(): Promise<void> {
+    return this.connector.disconnectAll();
   }
 }
