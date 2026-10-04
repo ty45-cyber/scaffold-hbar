@@ -1,4 +1,4 @@
-import { TopicMessageSubmitTransaction, TopicMessageQuery, Client, Signer } from "@hiero-ledger/sdk";
+import { TopicMessageSubmitTransaction, TopicMessageQuery, Client, Signer } from "@hashgraph/sdk";
 
 export class HederaConsensusEngine {
   public static async submitMessage(signer: Signer, topicId: string, message: string): Promise<string> {

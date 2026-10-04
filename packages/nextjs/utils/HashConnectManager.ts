@@ -4,7 +4,7 @@ import {
   HederaSessionEvent,
   HederaChainId,
 } from "@hashgraph/hedera-wallet-connect";
-import { LedgerId } from "@hiero-ledger/sdk";
+import { LedgerId } from "@hashgraph/sdk";
 
 export interface AppMetadata {
   name: string;

@@ -1,4 +1,4 @@
-import { TokenCreateTransaction, TokenMintTransaction, Client, Signer } from "@hiero-ledger/sdk";
+import { TokenCreateTransaction, TokenMintTransaction, Client, Signer } from "@hashgraph/sdk";
 
 export class HederaTokenEngine {
   public static async createToken(signer: Signer, name: string, symbol: string): Promise<string> {
