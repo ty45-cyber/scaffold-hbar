@@ -15,7 +15,7 @@ export default function AgentPlayground() {
 
   useEffect(() => {
     const accountId = process.env.NEXT_PUBLIC_HEDERA_ACCOUNT_ID;
-    const privateKey = process.env.NEXT_PUBLIC_HEDERA_PRIVATE_KEY;
+    const privateKey = process.env.NEXT_PUBLIC_HEDERA_PRIVATE_KEY || process.env.NEXT_PUBLIC_HEDERA_TESTNET_PRIVATE_KEY;
     if (accountId && privateKey) {
       try {
         executor.initialize(accountId, privateKey);
@@ -25,7 +25,7 @@ export default function AgentPlayground() {
         setError(e.message);
       }
     } else {
-      setError("Missing NEXT_PUBLIC_HEDERA_ACCOUNT_ID or NEXT_PUBLIC_HEDERA_PRIVATE_KEY env vars.");
+      setError("Missing NEXT_PUBLIC_HEDERA_ACCOUNT_ID or NEXT_PUBLIC_HEDERA_PRIVATE_KEY / NEXT_PUBLIC_HEDERA_TESTNET_PRIVATE_KEY env vars.");
     }
   }, []);
 
