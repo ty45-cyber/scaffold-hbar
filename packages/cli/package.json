@@ -1,6 +1,6 @@
 {
   "name": "create-scaffold-hbar",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "bin": { "create-scaffold-hbar": "dist/index.js" },
   "scripts": {
     "build": "tsc",
